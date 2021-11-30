@@ -1,2 +1,5 @@
-package org.example;public interface Observer {
+package org.example.observer;
+
+public interface Observer {
+    void update();
 }
