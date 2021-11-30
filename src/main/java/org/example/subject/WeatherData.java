@@ -1,10 +1,12 @@
 package org.example.subject;
 
+import lombok.Getter;
 import org.example.observer.Observer;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Getter
 public class WeatherData implements Subject {
     private List<Observer> observerList;
     private float temperature;
@@ -29,7 +31,7 @@ public class WeatherData implements Subject {
     @Override
     public void notifyObservers() {
         for (Observer observer : observerList) {
-            observer.update(temperature, humidity, pressure);
+            observer.update();
         }
     }
 

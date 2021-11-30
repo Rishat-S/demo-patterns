@@ -3,25 +3,24 @@ package org.example.observer;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import org.example.subject.Subject;
+import org.example.subject.WeatherData;
 
 @Getter
 @AllArgsConstructor
 public class CurrentConditionsDisplay implements Observer, DisplayElement{
     private float temperature;
     private float humidity;
-    private float pressure;
-    private Subject weatherData;
+    private WeatherData weatherData;
 
-    public CurrentConditionsDisplay(Subject weatherData) {
+    public CurrentConditionsDisplay(WeatherData weatherData) {
         this.weatherData = weatherData;
         weatherData.registerObserver(this);
     }
 
     @Override
-    public void update(float temperature, float humidity, float pressure) {
-        this.temperature = temperature;
-        this.humidity = humidity;
-        this.pressure = pressure;
+    public void update() {
+        this.temperature = weatherData.getTemperature();
+        this.humidity = weatherData.getHumidity();
         display();
     }
 
