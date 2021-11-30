@@ -1,9 +1,11 @@
 package org.example.subject;
 
-public interface Subject {
-    void registerObserver();
+import org.example.observer.Observer;
 
-    void removeObserver();
+public interface Subject {
+    void registerObserver(Observer observer);
+
+    void removeObserver(Observer observer);
 
     void notifyObservers();
 }
