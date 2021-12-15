@@ -8,6 +8,10 @@ public class HouseBlend extends Beverage {
 
     @Override
     public double cost() {
-        return .89;
+        switch (getSize()) {
+            case GRANDE: return .95;
+            case VENTI: return .90;
+        }
+        return .99;
     }
 }

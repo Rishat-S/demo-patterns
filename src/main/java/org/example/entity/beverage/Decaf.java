@@ -8,6 +8,10 @@ public class Decaf extends Beverage{
 
     @Override
     public double cost() {
-        return 1.05;
+        switch (getSize()) {
+            case GRANDE: return 1.05;
+            case VENTI: return .90;
+        }
+        return 2.05;
     }
 }
