@@ -1,7 +1,5 @@
 package org.example.entity.beverage;
 
-import org.example.entity.beverage.Beverage;
-
 public class Espresso extends Beverage {
 
     public Espresso() {
