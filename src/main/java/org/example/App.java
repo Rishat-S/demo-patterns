@@ -14,7 +14,6 @@ public class App {
 
         remoteControl.setCommand(Buttons.FIRST, light::on, light::off);
         remoteControl.onButtonWasPushed(Buttons.FIRST);
-        remoteControl.offButtonWasPushed(Buttons.FIRST);
 
         remoteControl.setCommand(Buttons.SECOND, stereo::on, stereo::off);
         remoteControl.setCommand(Buttons.THIRD, stereo::setCd, stereo::setDvd);
@@ -27,7 +26,9 @@ public class App {
         remoteControl.onButtonWasPushed(Buttons.FOURTH);
         remoteControl.onButtonWasPushed(Buttons.FOURTH);
         remoteControl.offButtonWasPushed(Buttons.FOURTH);
+
         remoteControl.offButtonWasPushed(Buttons.SECOND);
+        remoteControl.offButtonWasPushed(Buttons.FIRST);
 
         System.out.println(remoteControl);
     }
