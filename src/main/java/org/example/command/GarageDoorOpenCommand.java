@@ -12,8 +12,6 @@ public class GarageDoorOpenCommand implements Command {
 
     @Override
     public void execute() {
-        garageDoor.lightOn();
         garageDoor.up();
-        garageDoor.stop();
     }
 }
