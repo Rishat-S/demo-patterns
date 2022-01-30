@@ -7,10 +7,7 @@ class SingletonTest {
 
     @Test
     public void testSingleton() {
-        Singleton singleton = Singleton.getInstance();
-        Singleton singleton1 = Singleton.getInstance();
-
-        Assertions.assertSame(singleton1, singleton);
+        Assertions.assertSame(Singleton.MY_SINGLETON, Singleton.MY_SINGLETON);
     }
 
 }
