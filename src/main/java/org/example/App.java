@@ -21,10 +21,12 @@ public class App {
         remoteControl.setCommand(Buttons.FIRST, lightOnCommand, lightOffCommand);
         remoteControl.onButtonWasPushed(Buttons.FIRST);
         remoteControl.offButtonWasPushed(Buttons.FIRST);
+        remoteControl.undoButtonWasPushed();
 
         remoteControl.setCommand(Buttons.SECOND, stereoOnWithCDCommand, stereoOffWithCDCommand);
         remoteControl.onButtonWasPushed(Buttons.SECOND);
         remoteControl.offButtonWasPushed(Buttons.SECOND);
+        remoteControl.undoButtonWasPushed();
 
         System.out.println(remoteControl);
     }
