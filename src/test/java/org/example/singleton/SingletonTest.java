@@ -10,7 +10,7 @@ class SingletonTest {
         Singleton singleton = Singleton.getInstance();
         Singleton singleton1 = Singleton.getInstance();
 
-        Assertions.assertTrue(singleton1 == singleton);
+        Assertions.assertSame(singleton1, singleton);
     }
 
 }
